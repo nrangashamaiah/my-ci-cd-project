@@ -1,0 +1,2438 @@
+09/17/2025
+==========
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+nirmala@nirmala-VMware-Virtual-Platform:~$ git --version
+Command 'git' not found, but can be installed with:
+sudo apt install git
+nirmala@nirmala-VMware-Virtual-Platform:~$ apt-get update
+Reading package lists... Done
+E: Could not open lock file /var/lib/apt/lists/lock - open (13: Permission denied)
+E: Unable to lock directory /var/lib/apt/lists/
+W: Problem unlinking the file /var/cache/apt/pkgcache.bin - RemoveCaches (13: Permission denied)
+W: Problem unlinking the file /var/cache/apt/srcpkgcache.bin - RemoveCaches (13: Permission denied)
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo apt-get update
+[sudo] password for nirmala: 
+Hit:1 http://us.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://us.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://us.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Reading package lists... Done
+nirmala@nirmala-VMware-Virtual-Platform:~$ apt-get install git-core
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo apt-get install git-core
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Note, selecting 'git' instead of 'git-core'
+The following additional packages will be installed:
+  git-man liberror-perl
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui gitk gitweb
+  git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  git git-man liberror-perl
+0 upgraded, 3 newly installed, 0 to remove and 57 not upgraded.
+Need to get 4,806 kB of archives.
+After this operation, 24.5 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://us.archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.3 [1,100 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.3 [3,680 kB]
+Fetched 4,806 kB in 1s (5,419 kB/s)
+Selecting previously unselected package liberror-perl.
+(Reading database ... 150069 files and directories currently installed.)
+Preparing to unpack .../liberror-perl_0.17029-2_all.deb ...
+Unpacking liberror-perl (0.17029-2) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a2.43.0-1ubuntu7.3_all.deb ...
+Unpacking git-man (1:2.43.0-1ubuntu7.3) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a2.43.0-1ubuntu7.3_amd64.deb ...
+Unpacking git (1:2.43.0-1ubuntu7.3) ...
+Setting up liberror-perl (0.17029-2) ...
+Setting up git-man (1:2.43.0-1ubuntu7.3) ...
+Setting up git (1:2.43.0-1ubuntu7.3) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+nirmala@nirmala-VMware-Virtual-Platform:~$ git --version
+git version 2.43.0
+nirmala@nirmala-VMware-Virtual-Platform:~$ git config --global user.name "nrangashamaiah"
+nirmala@nirmala-VMware-Virtual-Platform:~$ git config --global user.email "nirmala.rangashamaiah@gmail.com"
+nirmala@nirmala-VMware-Virtual-Platform:~$ git config --list
+user.name=nrangashamaiah
+user.email=nirmala.rangashamaiah@gmail.com
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo apt update && sudo apt upgrade -y
+Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:2 http://us.archive.ubuntu.com/ubuntu noble InRelease
+Hit:3 http://us.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:4 http://us.archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+57 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following package was automatically installed and is no longer required:
+  libllvm19
+Use 'sudo apt autoremove' to remove it.
+The following NEW packages will be installed:
+  libllvm20
+The following upgrades have been deferred due to phasing:
+  dconf-cli dconf-gsettings-backend dconf-service libdconf1
+The following packages will be upgraded:
+  bind9-dnsutils bind9-host bind9-libs bluez bluez-cups bluez-obexd coreutils
+  fwupd gir1.2-gtk-4.0 gnome-shell-extension-desktop-icons-ng libbluetooth3
+  libegl-mesa0 libfwupd2 libgbm1 libgl1-mesa-dri libglx-mesa0 libgtk-4-1
+  libgtk-4-bin libgtk-4-common libgtk-4-media-gstreamer libipa-hbac0t64
+  libldb2 libmalcontent-0-0 libnss-sss libpam-sss libsmbclient0
+  libsss-certmap0 libsss-idmap0 libsss-nss-idmap0 libwbclient0 libxatracker2
+  mesa-libgallium mesa-vulkan-drivers openssh-client powermgmt-base
+  python3-software-properties python3-sss samba-libs
+  software-properties-common software-properties-gtk sssd sssd-ad
+  sssd-ad-common sssd-common sssd-ipa sssd-krb5 sssd-krb5-common sssd-ldap
+  sssd-proxy systemd-hwe-hwdb tecla xserver-xorg-video-nouveau
+  xserver-xorg-video-vesa
+53 upgraded, 1 newly installed, 0 to remove and 4 not upgraded.
+Need to get 86.3 MB of archives.
+After this operation, 144 MB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 coreutils amd64 9.4-3ubuntu6.1 [1,413 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 bluez amd64 5.72-0ubuntu5.4 [1,360 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 systemd-hwe-hwdb all 255.1.5 [3,518 B]
+Get:4 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 bind9-host amd64 1:9.18.39-0ubuntu0.24.04.1 [50.5 kB]
+Get:5 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 bind9-dnsutils amd64 1:9.18.39-0ubuntu0.24.04.1 [156 kB]
+Get:6 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 bind9-libs amd64 1:9.18.39-0ubuntu0.24.04.1 [1,257 kB]
+Get:7 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.14 [906 kB]
+Get:8 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 powermgmt-base all 1.37ubuntu0.1 [7,650 B]
+Get:9 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 bluez-cups amd64 5.72-0ubuntu5.4 [29.4 kB]
+Get:10 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 bluez-obexd amd64 5.72-0ubuntu5.4 [233 kB]
+Get:11 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libfwupd2 amd64 1.9.31-0ubuntu1~24.04.1 [136 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 fwupd amd64 1.9.31-0ubuntu1~24.04.1 [4,592 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-4-common all 4.14.5+ds-0ubuntu0.5 [1,497 kB]
+Get:14 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-4-1 amd64 4.14.5+ds-0ubuntu0.5 [3,293 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 gir1.2-gtk-4.0 amd64 4.14.5+ds-0ubuntu0.5 [223 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 gnome-shell-extension-desktop-icons-ng all 46+really47.0.9-1ubuntu4 [67.7 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libbluetooth3 amd64 5.72-0ubuntu5.4 [85.3 kB]
+Get:18 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgl1-mesa-dri amd64 25.0.7-0ubuntu0.24.04.2 [35.8 kB]
+Get:19 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libglx-mesa0 amd64 25.0.7-0ubuntu0.24.04.2 [141 kB]
+Get:20 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libllvm20 amd64 1:20.1.2-0ubuntu1~24.04.2 [30.6 MB]
+Get:21 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libegl-mesa0 amd64 25.0.7-0ubuntu0.24.04.2 [124 kB]
+Get:22 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgbm1 amd64 25.0.7-0ubuntu0.24.04.2 [32.7 kB]
+Get:23 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 mesa-libgallium amd64 25.0.7-0ubuntu0.24.04.2 [10.3 MB]
+Get:24 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-4-bin amd64 4.14.5+ds-0ubuntu0.5 [3,356 kB]
+Get:25 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-4-media-gstreamer amd64 4.14.5+ds-0ubuntu0.5 [67.7 kB]
+Get:26 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libsmbclient0 amd64 2:4.19.5+dfsg-4ubuntu9.3 [62.4 kB]
+Get:27 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libldb2 amd64 2:2.8.0+samba4.19.5+dfsg-4ubuntu9.3 [188 kB]
+Get:28 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 samba-libs amd64 2:4.19.5+dfsg-4ubuntu9.3 [6,018 kB]
+Get:29 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libwbclient0 amd64 2:4.19.5+dfsg-4ubuntu9.3 [71.4 kB]
+Get:30 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 sssd amd64 2.9.4-1.1ubuntu6.3 [4,124 B]
+Get:31 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-sss amd64 2.9.4-1.1ubuntu6.3 [47.4 kB]
+Get:32 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libsss-certmap0 amd64 2.9.4-1.1ubuntu6.3 [47.5 kB]
+Get:33 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 sssd-proxy amd64 2.9.4-1.1ubuntu6.3 [44.6 kB]
+Get:34 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 sssd-krb5 amd64 2.9.4-1.1ubuntu6.3 [14.5 kB]
+Get:35 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 sssd-ad amd64 2.9.4-1.1ubuntu6.3 [136 kB]
+Get:36 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 sssd-ldap amd64 2.9.4-1.1ubuntu6.3 [31.3 kB]
+Get:37 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 sssd-ipa amd64 2.9.4-1.1ubuntu6.3 [221 kB]
+Get:38 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 sssd-krb5-common amd64 2.9.4-1.1ubuntu6.3 [88.8 kB]
+Get:39 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 sssd-ad-common amd64 2.9.4-1.1ubuntu6.3 [77.1 kB]
+Get:40 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 sssd-common amd64 2.9.4-1.1ubuntu6.3 [1,140 kB]
+Get:41 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libnss-sss amd64 2.9.4-1.1ubuntu6.3 [32.0 kB]
+Get:42 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libpam-sss amd64 2.9.4-1.1ubuntu6.3 [50.8 kB]
+Get:43 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libsss-nss-idmap0 amd64 2.9.4-1.1ubuntu6.3 [30.7 kB]
+Get:44 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libsss-idmap0 amd64 2.9.4-1.1ubuntu6.3 [22.1 kB]
+Get:45 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libipa-hbac0t64 amd64 2.9.4-1.1ubuntu6.3 [17.8 kB]
+Get:46 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libmalcontent-0-0 amd64 0.11.1-1ubuntu1.2 [22.3 kB]
+Get:47 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 libxatracker2 amd64 25.0.7-0ubuntu0.24.04.2 [2,478 kB]
+Get:48 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 mesa-vulkan-drivers amd64 25.0.7-0ubuntu0.24.04.2 [15.3 MB]
+Get:49 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 software-properties-common all 0.99.49.3 [14.4 kB]
+Get:50 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 software-properties-gtk all 0.99.49.3 [83.2 kB]
+Get:51 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-software-properties all 0.99.49.3 [29.9 kB]
+Get:52 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 tecla amd64 46.0-1ubuntu0.1 [26.4 kB]
+Get:53 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 xserver-xorg-video-nouveau amd64 1:1.0.17-2ubuntu0.1 [91.5 kB]
+Get:54 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 xserver-xorg-video-vesa amd64 1:2.6.0-1ubuntu0.1 [15.5 kB]
+Fetched 86.3 MB in 4s (21.6 MB/s)
+Extracting templates from packages: 100%
+(Reading database ... 151153 files and directories currently installed.)
+Preparing to unpack .../coreutils_9.4-3ubuntu6.1_amd64.deb ...
+Unpacking coreutils (9.4-3ubuntu6.1) over (9.4-3ubuntu6) ...
+Setting up coreutils (9.4-3ubuntu6.1) ...
+(Reading database ... 151153 files and directories currently installed.)
+Preparing to unpack .../00-bluez_5.72-0ubuntu5.4_amd64.deb ...
+Unpacking bluez (5.72-0ubuntu5.4) over (5.72-0ubuntu5.3) ...
+Preparing to unpack .../01-systemd-hwe-hwdb_255.1.5_all.deb ...
+Unpacking systemd-hwe-hwdb (255.1.5) over (255.1.4) ...
+Preparing to unpack .../02-bind9-host_1%3a9.18.39-0ubuntu0.24.04.1_amd64.deb ...
+Unpacking bind9-host (1:9.18.39-0ubuntu0.24.04.1) over (1:9.18.30-0ubuntu0.24.04
+.2) ...
+Preparing to unpack .../03-bind9-dnsutils_1%3a9.18.39-0ubuntu0.24.04.1_amd64.deb
+ ...
+Unpacking bind9-dnsutils (1:9.18.39-0ubuntu0.24.04.1) over (1:9.18.30-0ubuntu0.2
+4.04.2) ...
+Preparing to unpack .../04-bind9-libs_1%3a9.18.39-0ubuntu0.24.04.1_amd64.deb ...
+Unpacking bind9-libs:amd64 (1:9.18.39-0ubuntu0.24.04.1) over (1:9.18.30-0ubuntu0
+.24.04.2) ...
+Preparing to unpack .../05-openssh-client_1%3a9.6p1-3ubuntu13.14_amd64.deb ...
+Unpacking openssh-client (1:9.6p1-3ubuntu13.14) over (1:9.6p1-3ubuntu13.13) ...
+Preparing to unpack .../06-powermgmt-base_1.37ubuntu0.1_all.deb ...
+Unpacking powermgmt-base (1.37ubuntu0.1) over (1.37) ...
+Preparing to unpack .../07-bluez-cups_5.72-0ubuntu5.4_amd64.deb ...
+Unpacking bluez-cups (5.72-0ubuntu5.4) over (5.72-0ubuntu5.3) ...
+Preparing to unpack .../08-bluez-obexd_5.72-0ubuntu5.4_amd64.deb ...
+Unpacking bluez-obexd (5.72-0ubuntu5.4) over (5.72-0ubuntu5.3) ...
+Preparing to unpack .../09-libfwupd2_1.9.31-0ubuntu1~24.04.1_amd64.deb ...
+Unpacking libfwupd2:amd64 (1.9.31-0ubuntu1~24.04.1) over (1.9.30-0ubuntu1~24.04.
+1) ...
+Preparing to unpack .../10-fwupd_1.9.31-0ubuntu1~24.04.1_amd64.deb ...
+Unpacking fwupd (1.9.31-0ubuntu1~24.04.1) over (1.9.30-0ubuntu1~24.04.1) ...
+Preparing to unpack .../11-libgtk-4-common_4.14.5+ds-0ubuntu0.5_all.deb ...
+Unpacking libgtk-4-common (4.14.5+ds-0ubuntu0.5) over (4.14.5+ds-0ubuntu0.4) ...
+Preparing to unpack .../12-libgtk-4-1_4.14.5+ds-0ubuntu0.5_amd64.deb ...
+Unpacking libgtk-4-1:amd64 (4.14.5+ds-0ubuntu0.5) over (4.14.5+ds-0ubuntu0.4) ..
+.
+Preparing to unpack .../13-gir1.2-gtk-4.0_4.14.5+ds-0ubuntu0.5_amd64.deb ...
+Unpacking gir1.2-gtk-4.0:amd64 (4.14.5+ds-0ubuntu0.5) over (4.14.5+ds-0ubuntu0.4
+) ...
+Preparing to unpack .../14-gnome-shell-extension-desktop-icons-ng_46+really47.0.
+9-1ubuntu4_all.deb ...
+Unpacking gnome-shell-extension-desktop-icons-ng (46+really47.0.9-1ubuntu4) over
+ (46+really47.0.9-1ubuntu2) ...
+Preparing to unpack .../15-libbluetooth3_5.72-0ubuntu5.4_amd64.deb ...
+Unpacking libbluetooth3:amd64 (5.72-0ubuntu5.4) over (5.72-0ubuntu5.3) ...
+Preparing to unpack .../16-libgl1-mesa-dri_25.0.7-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking libgl1-mesa-dri:amd64 (25.0.7-0ubuntu0.24.04.2) over (25.0.7-0ubuntu0.
+24.04.1) ...
+Preparing to unpack .../17-libglx-mesa0_25.0.7-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking libglx-mesa0:amd64 (25.0.7-0ubuntu0.24.04.2) over (25.0.7-0ubuntu0.24.
+04.1) ...
+Selecting previously unselected package libllvm20:amd64.
+Preparing to unpack .../18-libllvm20_1%3a20.1.2-0ubuntu1~24.04.2_amd64.deb ...
+Unpacking libllvm20:amd64 (1:20.1.2-0ubuntu1~24.04.2) ...
+Preparing to unpack .../19-libegl-mesa0_25.0.7-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking libegl-mesa0:amd64 (25.0.7-0ubuntu0.24.04.2) over (25.0.7-0ubuntu0.24.
+04.1) ...
+Preparing to unpack .../20-libgbm1_25.0.7-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking libgbm1:amd64 (25.0.7-0ubuntu0.24.04.2) over (25.0.7-0ubuntu0.24.04.1)
+ ...
+Preparing to unpack .../21-mesa-libgallium_25.0.7-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking mesa-libgallium:amd64 (25.0.7-0ubuntu0.24.04.2) over (25.0.7-0ubuntu0.
+24.04.1) ...
+Preparing to unpack .../22-libgtk-4-bin_4.14.5+ds-0ubuntu0.5_amd64.deb ...
+Unpacking libgtk-4-bin (4.14.5+ds-0ubuntu0.5) over (4.14.5+ds-0ubuntu0.4) ...
+Preparing to unpack .../23-libgtk-4-media-gstreamer_4.14.5+ds-0ubuntu0.5_amd64.d
+eb ...
+Unpacking libgtk-4-media-gstreamer (4.14.5+ds-0ubuntu0.5) over (4.14.5+ds-0ubunt
+u0.4) ...
+Preparing to unpack .../24-libsmbclient0_2%3a4.19.5+dfsg-4ubuntu9.3_amd64.deb ..
+.
+Unpacking libsmbclient0:amd64 (2:4.19.5+dfsg-4ubuntu9.3) over (2:4.19.5+dfsg-4ub
+untu9.2) ...
+Preparing to unpack .../25-libldb2_2%3a2.8.0+samba4.19.5+dfsg-4ubuntu9.3_amd64.d
+eb ...
+Unpacking libldb2:amd64 (2:2.8.0+samba4.19.5+dfsg-4ubuntu9.3) over (2:2.8.0+samb
+a4.19.5+dfsg-4ubuntu9.2) ...
+Preparing to unpack .../26-samba-libs_2%3a4.19.5+dfsg-4ubuntu9.3_amd64.deb ...
+Unpacking samba-libs:amd64 (2:4.19.5+dfsg-4ubuntu9.3) over (2:4.19.5+dfsg-4ubunt
+u9.2) ...
+Preparing to unpack .../27-libwbclient0_2%3a4.19.5+dfsg-4ubuntu9.3_amd64.deb ...
+Unpacking libwbclient0:amd64 (2:4.19.5+dfsg-4ubuntu9.3) over (2:4.19.5+dfsg-4ubu
+ntu9.2) ...
+Preparing to unpack .../28-sssd_2.9.4-1.1ubuntu6.3_amd64.deb ...
+Unpacking sssd (2.9.4-1.1ubuntu6.3) over (2.9.4-1.1ubuntu6.2) ...
+Preparing to unpack .../29-python3-sss_2.9.4-1.1ubuntu6.3_amd64.deb ...
+Unpacking python3-sss (2.9.4-1.1ubuntu6.3) over (2.9.4-1.1ubuntu6.2) ...
+Preparing to unpack .../30-libsss-certmap0_2.9.4-1.1ubuntu6.3_amd64.deb ...
+Unpacking libsss-certmap0 (2.9.4-1.1ubuntu6.3) over (2.9.4-1.1ubuntu6.2) ...
+Preparing to unpack .../31-sssd-proxy_2.9.4-1.1ubuntu6.3_amd64.deb ...
+Unpacking sssd-proxy (2.9.4-1.1ubuntu6.3) over (2.9.4-1.1ubuntu6.2) ...
+Preparing to unpack .../32-sssd-krb5_2.9.4-1.1ubuntu6.3_amd64.deb ...
+Unpacking sssd-krb5 (2.9.4-1.1ubuntu6.3) over (2.9.4-1.1ubuntu6.2) ...
+Preparing to unpack .../33-sssd-ad_2.9.4-1.1ubuntu6.3_amd64.deb ...
+Unpacking sssd-ad (2.9.4-1.1ubuntu6.3) over (2.9.4-1.1ubuntu6.2) ...
+Preparing to unpack .../34-sssd-ldap_2.9.4-1.1ubuntu6.3_amd64.deb ...
+Unpacking sssd-ldap (2.9.4-1.1ubuntu6.3) over (2.9.4-1.1ubuntu6.2) ...
+Preparing to unpack .../35-sssd-ipa_2.9.4-1.1ubuntu6.3_amd64.deb ...
+Unpacking sssd-ipa (2.9.4-1.1ubuntu6.3) over (2.9.4-1.1ubuntu6.2) ...
+Preparing to unpack .../36-sssd-krb5-common_2.9.4-1.1ubuntu6.3_amd64.deb ...
+Unpacking sssd-krb5-common (2.9.4-1.1ubuntu6.3) over (2.9.4-1.1ubuntu6.2) ...
+Preparing to unpack .../37-sssd-ad-common_2.9.4-1.1ubuntu6.3_amd64.deb ...
+Unpacking sssd-ad-common (2.9.4-1.1ubuntu6.3) over (2.9.4-1.1ubuntu6.2) ...
+Preparing to unpack .../38-sssd-common_2.9.4-1.1ubuntu6.3_amd64.deb ...
+Unpacking sssd-common (2.9.4-1.1ubuntu6.3) over (2.9.4-1.1ubuntu6.2) ...
+Preparing to unpack .../39-libnss-sss_2.9.4-1.1ubuntu6.3_amd64.deb ...
+Unpacking libnss-sss:amd64 (2.9.4-1.1ubuntu6.3) over (2.9.4-1.1ubuntu6.2) ...
+Preparing to unpack .../40-libpam-sss_2.9.4-1.1ubuntu6.3_amd64.deb ...
+Unpacking libpam-sss:amd64 (2.9.4-1.1ubuntu6.3) over (2.9.4-1.1ubuntu6.2) ...
+Preparing to unpack .../41-libsss-nss-idmap0_2.9.4-1.1ubuntu6.3_amd64.deb ...
+Unpacking libsss-nss-idmap0 (2.9.4-1.1ubuntu6.3) over (2.9.4-1.1ubuntu6.2) ...
+Preparing to unpack .../42-libsss-idmap0_2.9.4-1.1ubuntu6.3_amd64.deb ...
+Unpacking libsss-idmap0 (2.9.4-1.1ubuntu6.3) over (2.9.4-1.1ubuntu6.2) ...
+Preparing to unpack .../43-libipa-hbac0t64_2.9.4-1.1ubuntu6.3_amd64.deb ...
+Unpacking libipa-hbac0t64 (2.9.4-1.1ubuntu6.3) over (2.9.4-1.1ubuntu6.2) ...
+Preparing to unpack .../44-libmalcontent-0-0_0.11.1-1ubuntu1.2_amd64.deb ...
+Unpacking libmalcontent-0-0:amd64 (0.11.1-1ubuntu1.2) over (0.11.1-1ubuntu1.1) .
+..
+Preparing to unpack .../45-libxatracker2_25.0.7-0ubuntu0.24.04.2_amd64.deb ...
+Unpacking libxatracker2:amd64 (25.0.7-0ubuntu0.24.04.2) over (25.0.7-0ubuntu0.24
+.04.1) ...
+Preparing to unpack .../46-mesa-vulkan-drivers_25.0.7-0ubuntu0.24.04.2_amd64.deb
+ ...
+Unpacking mesa-vulkan-drivers:amd64 (25.0.7-0ubuntu0.24.04.2) over (25.0.7-0ubun
+tu0.24.04.1) ...
+Preparing to unpack .../47-software-properties-common_0.99.49.3_all.deb ...
+Unpacking software-properties-common (0.99.49.3) over (0.99.49.2) ...
+Preparing to unpack .../48-software-properties-gtk_0.99.49.3_all.deb ...
+Unpacking software-properties-gtk (0.99.49.3) over (0.99.49.2) ...
+Preparing to unpack .../49-python3-software-properties_0.99.49.3_all.deb ...
+Unpacking python3-software-properties (0.99.49.3) over (0.99.49.2) ...
+Preparing to unpack .../50-tecla_46.0-1ubuntu0.1_amd64.deb ...
+Unpacking tecla (46.0-1ubuntu0.1) over (46.0-1build1) ...
+Preparing to unpack .../51-xserver-xorg-video-nouveau_1%3a1.0.17-2ubuntu0.1_amd6
+4.deb ...
+Unpacking xserver-xorg-video-nouveau (1:1.0.17-2ubuntu0.1) over (1:1.0.17-2build
+1) ...
+Preparing to unpack .../52-xserver-xorg-video-vesa_1%3a2.6.0-1ubuntu0.1_amd64.de
+b ...
+Unpacking xserver-xorg-video-vesa (1:2.6.0-1ubuntu0.1) over (1:2.6.0-1) ...
+Setting up powermgmt-base (1.37ubuntu0.1) ...
+Setting up libsss-idmap0 (2.9.4-1.1ubuntu6.3) ...
+Setting up bind9-libs:amd64 (1:9.18.39-0ubuntu0.24.04.1) ...
+Setting up libipa-hbac0t64 (2.9.4-1.1ubuntu6.3) ...
+Setting up openssh-client (1:9.6p1-3ubuntu13.14) ...
+Setting up xserver-xorg-video-nouveau (1:1.0.17-2ubuntu0.1) ...
+Setting up libfwupd2:amd64 (1.9.31-0ubuntu1~24.04.1) ...
+Setting up libwbclient0:amd64 (2:4.19.5+dfsg-4ubuntu9.3) ...
+Setting up libsss-certmap0 (2.9.4-1.1ubuntu6.3) ...
+Setting up bluez-obexd (5.72-0ubuntu5.4) ...
+Setting up bluez (5.72-0ubuntu5.4) ...
+Setting up python3-software-properties (0.99.49.3) ...
+Setting up libllvm20:amd64 (1:20.1.2-0ubuntu1~24.04.2) ...
+Setting up systemd-hwe-hwdb (255.1.5) ...
+Setting up bluez-cups (5.72-0ubuntu5.4) ...
+Setting up libbluetooth3:amd64 (5.72-0ubuntu5.4) ...
+Setting up xserver-xorg-video-vesa (1:2.6.0-1ubuntu0.1) ...
+Setting up libgtk-4-common (4.14.5+ds-0ubuntu0.5) ...
+Setting up libldb2:amd64 (2:2.8.0+samba4.19.5+dfsg-4ubuntu9.3) ...
+Setting up bind9-host (1:9.18.39-0ubuntu0.24.04.1) ...
+Setting up libsss-nss-idmap0 (2.9.4-1.1ubuntu6.3) ...
+Setting up libpam-sss:amd64 (2.9.4-1.1ubuntu6.3) ...
+Setting up gnome-shell-extension-desktop-icons-ng (46+really47.0.9-1ubuntu4) ...
+Setting up fwupd (1.9.31-0ubuntu1~24.04.1) ...
+fwupd-offline-update.service is a disabled or a static unit not running, not sta
+rting it.
+fwupd-refresh.service is a disabled or a static unit not running, not starting i
+t.
+fwupd.service is a disabled or a static unit not running, not starting it.
+Setting up libmalcontent-0-0:amd64 (0.11.1-1ubuntu1.2) ...
+Setting up libnss-sss:amd64 (2.9.4-1.1ubuntu6.3) ...
+Setting up mesa-vulkan-drivers:amd64 (25.0.7-0ubuntu0.24.04.2) ...
+Setting up mesa-libgallium:amd64 (25.0.7-0ubuntu0.24.04.2) ...
+Setting up libgbm1:amd64 (25.0.7-0ubuntu0.24.04.2) ...
+Setting up libgl1-mesa-dri:amd64 (25.0.7-0ubuntu0.24.04.2) ...
+Setting up samba-libs:amd64 (2:4.19.5+dfsg-4ubuntu9.3) ...
+Setting up python3-sss (2.9.4-1.1ubuntu6.3) ...
+Setting up software-properties-common (0.99.49.3) ...
+Setting up libxatracker2:amd64 (25.0.7-0ubuntu0.24.04.2) ...
+Setting up libegl-mesa0:amd64 (25.0.7-0ubuntu0.24.04.2) ...
+Setting up bind9-dnsutils (1:9.18.39-0ubuntu0.24.04.1) ...
+Setting up libsmbclient0:amd64 (2:4.19.5+dfsg-4ubuntu9.3) ...
+Setting up libglx-mesa0:amd64 (25.0.7-0ubuntu0.24.04.2) ...
+Setting up software-properties-gtk (0.99.49.3) ...
+Setting up sssd-common (2.9.4-1.1ubuntu6.3) ...
+Installing new version of config file /etc/apparmor.d/usr.sbin.sssd ...
+Warning: found usr.sbin.sssd in /etc/apparmor.d/force-complain, forcing complain
+ mode
+Warning from /etc/apparmor.d/usr.sbin.sssd (/etc/apparmor.d/usr.sbin.sssd line 6
+9): Caching disabled for: 'usr.sbin.sssd' due to force complain
+sssd-autofs.service is a disabled or a static unit not running, not starting it.
+sssd-nss.service is a disabled or a static unit not running, not starting it.
+sssd-pam.service is a disabled or a static unit not running, not starting it.
+sssd-ssh.service is a disabled or a static unit not running, not starting it.
+sssd-sudo.service is a disabled or a static unit not running, not starting it.
+Could not execute systemctl:  at /usr/bin/deb-systemd-invoke line 148.
+Setting up sssd-proxy (2.9.4-1.1ubuntu6.3) ...
+Setting up sssd-ad-common (2.9.4-1.1ubuntu6.3) ...
+sssd-pac.service is a disabled or a static unit not running, not starting it.
+Could not execute systemctl:  at /usr/bin/deb-systemd-invoke line 148.
+Setting up sssd-krb5-common (2.9.4-1.1ubuntu6.3) ...
+Setting up sssd-krb5 (2.9.4-1.1ubuntu6.3) ...
+Setting up sssd-ldap (2.9.4-1.1ubuntu6.3) ...
+Setting up sssd-ad (2.9.4-1.1ubuntu6.3) ...
+Setting up sssd-ipa (2.9.4-1.1ubuntu6.3) ...
+Setting up sssd (2.9.4-1.1ubuntu6.3) ...
+Processing triggers for install-info (7.1-3build2) ...
+Processing triggers for desktop-file-utils (0.27-2build1) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for gnome-menus (3.36.0-1.1ubuntu3) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.5) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for libglib2.0-0t64:amd64 (2.80.0-6ubuntu3.4) ...
+Processing triggers for dbus (1.14.10-4ubuntu4.1) ...
+Processing triggers for shared-mime-info (2.4-4) ...
+Processing triggers for udev (255.4-1ubuntu8.10) ...
+Setting up libgtk-4-1:amd64 (4.14.5+ds-0ubuntu0.5) ...
+Setting up libgtk-4-bin (4.14.5+ds-0ubuntu0.5) ...
+Setting up gir1.2-gtk-4.0:amd64 (4.14.5+ds-0ubuntu0.5) ...
+Setting up tecla (46.0-1ubuntu0.1) ...
+Setting up libgtk-4-media-gstreamer (4.14.5+ds-0ubuntu0.5) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.5) ...
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo hostnamectl set-hostname master
+nirmala@nirmala-VMware-Virtual-Platform:~$ hostname
+master
+nirmala@nirmala-VMware-Virtual-Platform:~$ ip addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:0c:29:b8:70:04 brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.47.130/24 brd 192.168.47.255 scope global dynamic noprefixroute ens33
+       valid_lft 913sec preferred_lft 913sec
+    inet6 fe80::20c:29ff:feb8:7004/64 scope link 
+       valid_lft forever preferred_lft forever
+nirmala@nirmala-VMware-Virtual-Platform:~$ ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:0c:29:b8:70:04 brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.47.130/24 brd 192.168.47.255 scope global dynamic noprefixroute ens33
+       valid_lft 1758sec preferred_lft 1758sec
+    inet6 fe80::20c:29ff:feb8:7004/64 scope link 
+       valid_lft forever preferred_lft forever
+nirmala@nirmala-VMware-Virtual-Platform:~$ cat /etc/hosts
+127.0.0.1 localhost
+127.0.1.1 nirmala-VMware-Virtual-Platform
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo nano /etc/hosts
+[sudo] password for nirmala: 
+nirmala@nirmala-VMware-Virtual-Platform:~$ cat /etc/hosts
+127.0.0.1 localhost
+127.0.1.1 nirmala-VMware-Virtual-Platform
+
+#Slave entry
+192.168.1.101 slave
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+nirmala@nirmala-VMware-Virtual-Platform:~$ ping slave
+PING slave (192.168.1.101) 56(84) bytes of data.
+
+
+
+
+^C
+--- slave ping statistics ---
+94 packets transmitted, 0 received, 100% packet loss, time 95351ms
+
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo nano /etc/hosts
+nirmala@nirmala-VMware-Virtual-Platform:~$ ping slave
+PING slave (192.168.1.101) 56(84) bytes of data.
+^C
+--- slave ping statistics ---
+223 packets transmitted, 0 received, 100% packet loss, time 227390ms
+
+nirmala@nirmala-VMware-Virtual-Platform:~$ ip addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:0c:29:b8:70:04 brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.47.130/24 brd 192.168.47.255 scope global dynamic noprefixroute ens33
+       valid_lft 1795sec preferred_lft 1795sec
+    inet6 fe80::20c:29ff:feb8:7004/64 scope link 
+       valid_lft forever preferred_lft forever
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo nano /etc/hosts
+nirmala@nirmala-VMware-Virtual-Platform:~$ ping slave
+PING slave (192.168.1.101) 56(84) bytes of data.
+
+--- slave ping statistics ---
+66 packets transmitted, 0 received, 100% packet loss, time 66590ms
+
+^Cnirmala@nirmala-VMware-Virtual-Platform:~$ sudo ufw status
+Status: inactive
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo nano /etc/hosts
+nirmala@nirmala-VMware-Virtual-Platform:~$ cat /etc/hosts
+# 127.0.0.1 localhost
+127.0.1.1 nirmala-VMware-Virtual-Platform
+
+# Slave entry
+192.168.1.100 master
+192.168.1.101 slave
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo nano /etc/hosts
+nirmala@nirmala-VMware-Virtual-Platform:~$ ping slave
+PING slave (192.168.47.131) 56(84) bytes of data.
+64 bytes from slave (192.168.47.131): icmp_seq=1 ttl=64 time=1.53 ms
+64 bytes from slave (192.168.47.131): icmp_seq=2 ttl=64 time=1.27 ms
+64 bytes from slave (192.168.47.131): icmp_seq=3 ttl=64 time=1.20 ms
+64 bytes from slave (192.168.47.131): icmp_seq=4 ttl=64 time=1.83 ms
+64 bytes from slave (192.168.47.131): icmp_seq=5 ttl=64 time=1.86 ms
+64 bytes from slave (192.168.47.131): icmp_seq=6 ttl=64 time=3.21 ms
+^C
+--- slave ping statistics ---
+6 packets transmitted, 6 received, 0% packet loss, time 5034ms
+rtt min/avg/max/mdev = 1.195/1.817/3.206/0.670 ms
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo apt install openssh-server -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  libllvm19
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  ncurses-term openssh-sftp-server ssh-import-id
+Suggested packages:
+  molly-guard monkeysphere ssh-askpass
+The following NEW packages will be installed:
+  ncurses-term openssh-server openssh-sftp-server ssh-import-id
+0 upgraded, 4 newly installed, 0 to remove and 4 not upgraded.
+Need to get 832 kB of archives.
+After this operation, 6,743 kB of additional disk space will be used.
+Get:1 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-sftp-server amd64 1:9.6p1-3ubuntu13.14 [37.3 kB]
+Get:2 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-server amd64 1:9.6p1-3ubuntu13.14 [510 kB]
+Get:3 http://us.archive.ubuntu.com/ubuntu noble/main amd64 ncurses-term all 6.4+20240113-1ubuntu2 [275 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 ssh-import-id all 5.11-0ubuntu2.24.04.1 [10.1 kB]
+Fetched 832 kB in 1s (1,261 kB/s)         
+Preconfiguring packages ...
+Selecting previously unselected package openssh-sftp-server.
+(Reading database ... 151160 files and directories currently insta
+lled.)
+Preparing to unpack .../openssh-sftp-server_1%3a9.6p1-3ubuntu13.14
+_amd64.deb ...
+Unpacking openssh-sftp-server (1:9.6p1-3ubuntu13.14) ...
+Selecting previously unselected package openssh-server.
+Preparing to unpack .../openssh-server_1%3a9.6p1-3ubuntu13.14_amd6
+4.deb ...
+Unpacking openssh-server (1:9.6p1-3ubuntu13.14) ...
+Selecting previously unselected package ncurses-term.
+Preparing to unpack .../ncurses-term_6.4+20240113-1ubuntu2_all.deb
+ ...
+Unpacking ncurses-term (6.4+20240113-1ubuntu2) ...
+Selecting previously unselected package ssh-import-id.
+Preparing to unpack .../ssh-import-id_5.11-0ubuntu2.24.04.1_all.de
+b ...
+Unpacking ssh-import-id (5.11-0ubuntu2.24.04.1) ...
+Setting up openssh-sftp-server (1:9.6p1-3ubuntu13.14) ...
+Setting up openssh-server (1:9.6p1-3ubuntu13.14) ...
+
+Creating config file /etc/ssh/sshd_config with new version
+Created symlink /etc/systemd/system/sockets.target.wants/ssh.socke
+t → /usr/lib/systemd/system/ssh.socket.
+Created symlink /etc/systemd/system/ssh.service.requires/ssh.socke
+t → /usr/lib/systemd/system/ssh.socket.
+Setting up ssh-import-id (5.11-0ubuntu2.24.04.1) ...
+Setting up ncurses-term (6.4+20240113-1ubuntu2) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Processing triggers for ufw (0.36.2-6) ...
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo systemctl enable shh
+Failed to enable unit: Unit file shh.service does not exist.
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo apt update
+Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Hit:2 http://us.archive.ubuntu.com/ubuntu noble InRelease        
+Get:3 http://us.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:4 http://us.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:5 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [21.6 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [208 B]
+Get:7 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 c-n-f Metadata [496 B]
+Get:8 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [52.2 kB]
+Get:9 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [212 B]
+Get:10 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 c-n-f Metadata [452 B]
+Get:11 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1,415 kB]
+Get:12 http://us.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [175 kB]
+Get:13 http://us.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+Get:14 http://us.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1,484 kB]
+Get:15 http://us.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [299 kB]
+Get:16 http://us.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [377 kB]
+Get:17 http://us.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+Get:18 http://us.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [7,076 B]
+Get:19 http://us.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+Get:20 http://us.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [19.2 kB]
+Get:21 http://us.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+Fetched 4,232 kB in 2s (2,064 kB/s)                           
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+4 packages can be upgraded. Run 'apt list --upgradable' to see them.
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo apt install git openssh-client openssh-server -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+git is already the newest version (1:2.43.0-1ubuntu7.3).
+openssh-client is already the newest version (1:9.6p1-3ubuntu13.14).
+openssh-client set to manually installed.
+openssh-server is already the newest version (1:9.6p1-3ubuntu13.14).
+The following package was automatically installed and is no longer required:
+  libllvm19
+Use 'sudo apt autoremove' to remove it.
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo systemctl status ssh
+○ ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; disable>
+     Active: inactive (dead)
+TriggeredBy: ● ssh.socket
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo systemctl start ssh
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo systemctl enable ssh
+Synchronizing state of ssh.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable ssh
+Created symlink /etc/systemd/system/sshd.service → /usr/lib/systemd/system/ssh.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/ssh.service → /usr/lib/systemd/system/ssh.service.
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo systemctl status ssh
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; enabled>
+     Active: active (running) since Wed 2025-09-17 17:56:23 EDT; >
+TriggeredBy: ● ssh.socket
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 8670 (sshd)
+      Tasks: 1 (limit: 4545)
+     Memory: 1.2M (peak: 1.5M)
+        CPU: 27ms
+     CGroup: /system.slice/ssh.service
+             └─8670 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-1>
+
+Sep 17 17:56:23 master systemd[1]: Starting ssh.service - OpenBSD>
+Sep 17 17:56:23 master sshd[8670]: Server listening on 0.0.0.0 po>
+Sep 17 17:56:23 master systemd[1]: Started ssh.service - OpenBSD >
+Sep 17 17:56:23 master sshd[8670]: Server listening on :: port 22.
+
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo adduser git
+info: Adding user `git' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `git' (1001) ...
+info: Adding new user `git' (1001) with group `git (1001)' ...
+info: Creating home directory `/home/git' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+BAD PASSWORD: No password supplied
+Retype new password: 
+No password has been supplied.
+passwd: Authentication token manipulation error
+passwd: password unchanged
+Try again? [y/N] 
+Changing the user information for git
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] 
+info: Adding new user `git' to supplemental / extra groups `users' ...
+info: Adding user `git' to group `users' ...
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo su - git
+git@master:~$ mkdir myproject.git
+git@master:~$ cd myproject.git/
+git@master:~/myproject.git$ git init --bare
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/git/myproject.git/
+git@master:~/myproject.git$ xit
+Command 'xit' not found, did you mean:
+  command 'xt' from snap xt (0+git.99c6ce0)
+  command 'wit' from deb wit (3.01a-4.1)
+  command 'xir' from deb libxir-utils (2.5-1build1)
+  command 'git' from deb git (1:2.43.0-1ubuntu7.3)
+  command 'vit' from deb vit (2.3.2-1)
+  command 'xwit' from deb xwit (3.4-16)
+See 'snap info <snapname>' for additional versions.
+git@master:~/myproject.git$ exit
+logout
+nirmala@nirmala-VMware-Virtual-Platform:~$ sudo passwd git
+New password: 
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password: 
+passwd: password updated successfully
+nirmala@nirmala-VMware-Virtual-Platform:~$ su - git
+Password: 
+git@master:~$ git config --list
+git@master:~$ exit
+logout
+nirmala@nirmala-VMware-Virtual-Platform:~$ git config --list
+user.name=nrangashamaiah
+user.email=nirmala.rangashamaiah@gmail.com
+nirmala@nirmala-VMware-Virtual-Platform:~$ ls
+Desktop    Downloads  Pictures  snap       Videos
+Documents  Music      Public    Templates
+nirmala@nirmala-VMware-Virtual-Platform:~$ su - git
+Password: 
+git@master:~$ ls
+myproject.git  snap
+git@master:~$ cd myproject.git/
+git@master:~/myproject.git$ git og
+git: 'og' is not a git command. See 'git --help'.
+
+The most similar command is
+	log
+git@master:~/myproject.git$ git log
+commit 7aa4a763608cc94e07e441777be2eebe797bbb61 (HEAD -> master)
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 18:24:03 2025 -0400
+
+    Initial commit
+git@master:~/myproject.git$ ls
+branches  config  description  HEAD  hooks  info  objects  refs
+git@master:~/myproject.git$ exit
+logout
+nirmala@nirmala-VMware-Virtual-Platform:~$ cd /home/git/myproject.git
+bash: cd: /home/git/myproject.git: Permission denied
+nirmala@nirmala-VMware-Virtual-Platform:~$ su - git
+Password: 
+git@master:~$ history
+    1  mkdir myproject.git
+    2  cd myproject.git/
+    3  git init --bare
+    4  xit
+    5  exit
+    6  git config --list
+    7  exit
+    8  ls
+    9  cd myproject.git/
+   10  git og
+   11  git log
+   12  ls
+   13  exit
+   14  history
+git@master:~$ exit
+logout
+nirmala@nirmala-VMware-Virtual-Platform:~$ history
+    1  git --version
+    2  apt-get update
+    3  sudo apt-get update
+    4  apt-get install git-core
+    5  sudo apt-get install git-core
+    6  git --version
+    7  git config --global user.name "nrangashamaiah"
+    8  git config --global user.email "nirmala.rangashamaiah@gmail.com"
+    9  git config --list
+   10  sudo apt update && sudo apt upgrade -y
+   11  sudo hostnamectl set-hostname master
+   12  hostname
+   13  ip addr show
+   14  ip addr
+   15  cat /etc/hosts
+   16  sudo nano /etc/hosts
+   17  cat /etc/hosts
+   18  ping slave
+   19  sudo nano /etc/hosts
+   20  ping slave
+   21  ip addr show
+   22  sudo nano /etc/hosts
+   23  ping slave
+   24  sudo ufw status
+   25  sudo nano /etc/hosts
+   26  cat /etc/hosts
+   27  sudo nano /etc/hosts
+   28  ping slave
+   29  sudo apt install openssh-server -y
+   30  sudo systemctl enable shh
+   31  sudo apt update
+   32  sudo apt install git openssh-client openssh-server -y
+   33  sudo systemctl status ssh
+   34  sudo systemctl start ssh
+   35  sudo systemctl enable ssh
+   36  sudo systemctl status ssh
+   37  sudo adduser git
+   38  sudo su - git
+   39  sudo passwd git
+   40  su - git
+   41  git config --list
+   42  ls
+   43  su - git
+   44  cd /home/git/myproject.git
+   45  su - git
+   46  history
+nirmala@nirmala-VMware-Virtual-Platform:~$ cd /home/nirmala/
+nirmala@nirmala-VMware-Virtual-Platform:~$ ls -al
+total 80
+drwxr-x--- 15 nirmala nirmala 4096 Sep 17 18:19 .
+drwxr-xr-x  4 root    root    4096 Sep 17 17:58 ..
+-rw-r--r--  1 nirmala nirmala  220 Mar 31  2024 .bash_logout
+-rw-r--r--  1 nirmala nirmala 3771 Mar 31  2024 .bashrc
+drwx------  9 nirmala nirmala 4096 Sep 17 15:00 .cache
+drwx------ 12 nirmala nirmala 4096 Sep 17 15:20 .config
+drwxr-xr-x  2 nirmala nirmala 4096 Sep 17 14:57 Desktop
+drwxr-xr-x  2 nirmala nirmala 4096 Sep 17 14:57 Documents
+drwxr-xr-x  2 nirmala nirmala 4096 Sep 17 14:57 Downloads
+-rw-rw-r--  1 nirmala nirmala   71 Sep 17 15:03 .gitconfig
+-rw-------  1 nirmala nirmala   20 Sep 17 18:19 .lesshst
+drwx------  4 nirmala nirmala 4096 Sep 17 14:57 .local
+drwxr-xr-x  2 nirmala nirmala 4096 Sep 17 14:57 Music
+drwxr-xr-x  2 nirmala nirmala 4096 Sep 17 14:57 Pictures
+-rw-r--r--  1 nirmala nirmala  807 Mar 31  2024 .profile
+drwxr-xr-x  2 nirmala nirmala 4096 Sep 17 14:57 Public
+drwx------  5 nirmala nirmala 4096 Sep 17 15:00 snap
+drwx------  2 nirmala nirmala 4096 Sep 17 14:57 .ssh
+-rw-r--r--  1 nirmala nirmala    0 Sep 17 15:00 .sudo_as_admin_successful
+drwxr-xr-x  2 nirmala nirmala 4096 Sep 17 14:57 Templates
+drwxr-xr-x  2 nirmala nirmala 4096 Sep 17 14:57 Videos
+nirmala@nirmala-VMware-Virtual-Platform:~$ cd .ssh/
+nirmala@nirmala-VMware-Virtual-Platform:~/.ssh$ ls
+authorized_keys
+nirmala@nirmala-VMware-Virtual-Platform:~/.ssh$ su - git
+Password: 
+git@master:~$ cd /home/git/.ssh/
+git@master:~/.ssh$ ls
+authorized_keys
+git@master:~/.ssh$ cd au
+-bash: cd: au: No such file or directory
+git@master:~/.ssh$ cat authorized_keys 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCimsiKglhEBgkHDO5GzfDpY4vJPI7KQE7+e5llHkXL2FwiiWX7OjwDb3ZMOIWvVvBqQVvI99sZMxKtr3SINJzsMEwNUGDk5TWRB5eds4BbLIoIn3O9k5s2i9U+chMYgt9k1Gp74PVqAQ6uBLCojAlzFB2RkKzHPgi8bNYtVpW6XPwl0XLaZh/1PWmMhzYhG257Dx3VtKZ2ZtpHSjoeXp3wCVeMEYypbjmNbkK3JZRBuVX7sn1V5d03bMZH2JAHY3C1rwjD5yGN369BhO+GgkiRFLnSMaJ9YkL+OfE4DVebtce9Qt/4EeF/JAhsChk+FM/VXcorXCNyebXZlXWW+hlwAou2FiJAK3ryfpvBCa/tWD/viD6KAHXNaHDrmyAdXT6rN8CohHTSPdInCm8z+P35BcbrrMI2TUPOr0qk2n9/LZyi4CGFMGpNOAxuY0a6nMZDMzIrHi292wOCUB6b9Tfa5P8j+NTQ6IjsN9ETbXVqjiIMh3RENBzTwHZNThkmjielJlAPmqlFi+IOuYh0oENXKkOd8NKpWJFTLqPsWB1RQu1TX2ew3EgOk50ugm9iC7GJx1Pofc8wAVejlE48fDHdxM6d7Qt6+CyMLdCXYa4gfkZHdOYl3y5Qw0Ak68DfLSGJbApl8VdSi5mdy79gnfola1bp4E6sQIDvPnZkIggGIw== slave
+git@master:~/.ssh$ cd..
+cd..: command not found
+git@master:~/.ssh$ cd ..
+git@master:~$ ls
+myproject.git  snap
+git@master:~$ git clone https://github.com/nrangashamaiah/my-ci-cd-project.git
+Cloning into 'my-ci-cd-project'...
+warning: You appear to have cloned an empty repository.
+git@master:~$ cd my-ci-cd-project/
+git@master:~/my-ci-cd-project$ git status
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+git@master:~/my-ci-cd-project$ git checkout -b feature/login
+Switched to a new branch 'feature/login'
+git@master:~/my-ci-cd-project$ git branch
+git@master:~/my-ci-cd-project$ vi login.py
+git@master:~/my-ci-cd-project$ vi login.py
+git@master:~/my-ci-cd-project$ git add login.py 
+git@master:~/my-ci-cd-project$ git commit -m "Add basic login function"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'git@master.(none)')
+git@master:~/my-ci-cd-project$ git config --global user.name "nrangashamaiah"
+git@master:~/my-ci-cd-project$ git config --global user.email "nirmala.rangashamaiah@gmail.com"
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   login.py
+
+git@master:~/my-ci-cd-project$ git commit -m "Add basic login function"
+[feature/login (root-commit) d7b274f] Add basic login function
+ 1 file changed, 2 insertions(+)
+ create mode 100644 login.py
+git@master:~/my-ci-cd-project$ git push origin feature/login
+Username for 'https://github.com': nrangashamaiah
+Password for 'https://nrangashamaiah@github.com': 
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/nrangashamaiah/my-ci-cd-project.git/'
+git@master:~/my-ci-cd-project$ git push origin feature/login
+Username for 'https://github.com': nrangashamaiah
+Password for 'https://nrangashamaiah@github.com': 
+remote: {"auth_status":"auth_error","body":"Invalid username or token. Password authentication is not supported for Git operations."}
+fatal: Authentication failed for 'https://github.com/nrangashamaiah/my-ci-cd-project.git/'
+git@master:~/my-ci-cd-project$ git pull
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 892 bytes | 17.00 KiB/s, done.
+From https://github.com/nrangashamaiah/my-ci-cd-project
+ * [new branch]      main       -> origin/main
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> feature/login
+
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ ls
+login.py
+git@master:~/my-ci-cd-project$ git branch main
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git branch
+* feature/login
+  main
+git@master:~/my-ci-cd-project$ git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+git@master:~/my-ci-cd-project$ git pull
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+git@master:~/my-ci-cd-project$ ls
+login.py
+git@master:~/my-ci-cd-project$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git pull
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+git@master:~/my-ci-cd-project$ git checkout feature/login 
+Switched to branch 'feature/login'
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ ls
+login.py
+git@master:~/my-ci-cd-project$ git log
+commit d7b274ff24221ed15897db34596beaf0d91199ba (HEAD -> feature/login, main)
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 18:49:54 2025 -0400
+
+    Add basic login function
+git@master:~/my-ci-cd-project$ git push
+fatal: The current branch feature/login has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature/login
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+git@master:~/my-ci-cd-project$ git push origin feature/login
+Username for 'https://github.com': nrangashamaiah
+Password for 'https://nrangashamaiah@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 286 bytes | 286.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'feature/login' on GitHub by visiting:
+remote:      https://github.com/nrangashamaiah/my-ci-cd-project/pull/new/feature/login
+remote: 
+To https://github.com/nrangashamaiah/my-ci-cd-project.git
+ * [new branch]      feature/login -> feature/login
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git branch
+* feature/login
+  main
+git@master:~/my-ci-cd-project$ git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+git@master:~/my-ci-cd-project$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git pull
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+git@master:~/my-ci-cd-project$ git pull -f
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+git@master:~/my-ci-cd-project$ git config --list
+user.name=nrangashamaiah
+user.email=nirmala.rangashamaiah@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/nrangashamaiah/my-ci-cd-project.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+git@master:~/my-ci-cd-project$ git pull origin main
+From https://github.com/nrangashamaiah/my-ci-cd-project
+ * branch            main       -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+git@master:~/my-ci-cd-project$ ls
+login.py
+git@master:~/my-ci-cd-project$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git fetch origin
+git@master:~/my-ci-cd-project$ git diff main origin/main
+diff --git a/git b/git
+new file mode 100644
+index 0000000..26f7d92
+--- /dev/null
++++ b/git
+@@ -0,0 +1 @@
++remove AAAA AAAA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
+diff --git a/login.py b/login.py
+deleted file mode 100644
+index de5d481..0000000
+--- a/login.py
++++ /dev/null
+@@ -1,2 +0,0 @@
+-def login(user, password):
+-    return user == "admin" and password == "1234"
+git@master:~/my-ci-cd-project$ git pull origin main
+From https://github.com/nrangashamaiah/my-ci-cd-project
+ * branch            main       -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+git@master:~/my-ci-cd-project$ git merge main
+Already up to date.
+git@master:~/my-ci-cd-project$ git checkout feature/login 
+Switched to branch 'feature/login'
+git@master:~/my-ci-cd-project$ git merge main
+Already up to date.
+git@master:~/my-ci-cd-project$ git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+git@master:~/my-ci-cd-project$ git diff
+git@master:~/my-ci-cd-project$ git stash
+No local changes to save
+git@master:~/my-ci-cd-project$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git pull
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+git@master:~/my-ci-cd-project$ git rebase
+Successfully rebased and updated refs/heads/main.
+git@master:~/my-ci-cd-project$ git pull
+Already up to date.
+git@master:~/my-ci-cd-project$ ls
+git  login.py
+git@master:~/my-ci-cd-project$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git push
+Username for 'https://github.com': nrangashamaiah
+Password for 'https://nrangashamaiah@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 352 bytes | 117.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/nrangashamaiah/my-ci-cd-project.git
+   33cedf8..6ede96e  main -> main
+git@master:~/my-ci-cd-project$ ls
+git  login.py
+git@master:~/my-ci-cd-project$ rm login.py 
+git@master:~/my-ci-cd-project$ ls
+git
+git@master:~/my-ci-cd-project$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	deleted:    login.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git@master:~/my-ci-cd-project$ git add -A
+git@master:~/my-ci-cd-project$ git commit -m "remove duplicate"
+[main 3dd0d4c] remove duplicate
+ 1 file changed, 2 deletions(-)
+ delete mode 100644 login.py
+git@master:~/my-ci-cd-project$ git push
+Username for 'https://github.com': nrangashamaiah
+Password for 'https://nrangashamaiah@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (1/1), done.
+Writing objects: 100% (2/2), 231 bytes | 231.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/nrangashamaiah/my-ci-cd-project.git
+   6ede96e..3dd0d4c  main -> main
+git@master:~/my-ci-cd-project$ git checkout feature/login 
+Switched to branch 'feature/login'
+git@master:~/my-ci-cd-project$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+git@master:~/my-ci-cd-project$ git pull origin main
+From https://github.com/nrangashamaiah/my-ci-cd-project
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+git@master:~/my-ci-cd-project$ git checkout feature/login 
+Switched to branch 'feature/login'
+git@master:~/my-ci-cd-project$ git merge main
+fatal: refusing to merge unrelated histories
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git diff
+git@master:~/my-ci-cd-project$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+git@master:~/my-ci-cd-project$ ls
+git
+git@master:~/my-ci-cd-project$ git add test.txt
+fatal: pathspec 'test.txt' did not match any files
+git@master:~/my-ci-cd-project$ vi test.txt
+git@master:~/my-ci-cd-project$ git add test.txt
+git@master:~/my-ci-cd-project$ git commit -m "adding test.txt"
+[main bd93f3a] adding test.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+git@master:~/my-ci-cd-project$ git push
+Username for 'https://github.com': nrangashamaiah 
+Password for 'https://nrangashamaiah@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 280 bytes | 140.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/nrangashamaiah/my-ci-cd-project.git
+   3dd0d4c..bd93f3a  main -> main
+git@master:~/my-ci-cd-project$ git fetch origin
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 956 bytes | 956.00 KiB/s, done.
+From https://github.com/nrangashamaiah/my-ci-cd-project
+   bd93f3a..1905f34  main       -> origin/main
+git@master:~/my-ci-cd-project$ git diff main origin/main
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..e845566
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1 @@
++README
+git@master:~/my-ci-cd-project$ git pull origin main
+From https://github.com/nrangashamaiah/my-ci-cd-project
+ * branch            main       -> FETCH_HEAD
+Updating bd93f3a..1905f34
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+git@master:~/my-ci-cd-project$ git checkout feature/login 
+Switched to branch 'feature/login'
+git@master:~/my-ci-cd-project$ git merge main
+fatal: refusing to merge unrelated histories
+git@master:~/my-ci-cd-project$ git merge origin/main 
+fatal: refusing to merge unrelated histories
+git@master:~/my-ci-cd-project$ git log
+commit d7b274ff24221ed15897db34596beaf0d91199ba (HEAD -> feature/login, origin/feature/login)
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 18:49:54 2025 -0400
+
+    Add basic login function
+git@master:~/my-ci-cd-project$ git checkout feature/login 
+Already on 'feature/login'
+git@master:~/my-ci-cd-project$ git log
+commit d7b274ff24221ed15897db34596beaf0d91199ba (HEAD -> feature/login, origin/feature/login)
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 18:49:54 2025 -0400
+
+    Add basic login function
+git@master:~/my-ci-cd-project$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+git@master:~/my-ci-cd-project$ git log
+commit 1905f34f593cdc1981626c7ea1a3a362ee6de2d3 (HEAD -> main, origin/main)
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:26:28 2025 -0400
+
+    Create README.md
+
+commit bd93f3aa9fc035a00b122e8c3ce54e674d47812d
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:23:55 2025 -0400
+
+    adding test.txt
+
+commit 3dd0d4c4e680a6fdf0511a561bb5637d7aa0f25c
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:17:28 2025 -0400
+
+    remove duplicate
+
+commit 6ede96ebf347333ec1955c6656ca44ade0fbfd41
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 18:49:54 2025 -0400
+git@master:~/my-ci-cd-project$ git checkout feature/login 
+Switched to branch 'feature/login'
+git@master:~/my-ci-cd-project$ vi abc.txt >> "abc"
+Vim: Warning: Output is not to a terminal
+git@master:~/my-ci-cd-project$ ^C
+git@master:~/my-ci-cd-project$ ls
+abc  login.py
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	abc
+
+nothing added to commit but untracked files present (use "git add" to track)
+git@master:~/my-ci-cd-project$ git rebase
+There is no tracking information for the current branch.
+Please specify which branch you want to rebase against.
+See git-rebase(1) for details.
+
+    git rebase '<branch>'
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> feature/login
+
+git@master:~/my-ci-cd-project$ git rebase feature/login 
+Current branch feature/login is up to date.
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	abc
+
+nothing added to commit but untracked files present (use "git add" to track)
+git@master:~/my-ci-cd-project$ rm abc 
+git@master:~/my-ci-cd-project$ ls
+login.py
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ vi abc.txt
+git@master:~/my-ci-cd-project$ ls
+abc.txt  login.py
+git@master:~/my-ci-cd-project$ git add -A
+git@master:~/my-ci-cd-project$ git commit -m "added abc.txt"
+[feature/login e0c1f54] added abc.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 abc.txt
+git@master:~/my-ci-cd-project$ git push origin feature/login 
+Username for 'https://github.com': nrangashamaiah
+Password for 'https://nrangashamaiah@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 277 bytes | 277.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/nrangashamaiah/my-ci-cd-project.git
+   d7b274f..e0c1f54  feature/login -> feature/login
+git@master:~/my-ci-cd-project$ git diff
+git@master:~/my-ci-cd-project$ git diff feature/login main 
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..e845566
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1 @@
++README
+diff --git a/abc.txt b/abc.txt
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/git b/git
+new file mode 100644
+index 0000000..26f7d92
+--- /dev/null
++++ b/git
+@@ -0,0 +1 @@
++remove AAAA AAAA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
+diff --git a/login.py b/login.py
+deleted file mode 100644
+index de5d481..0000000
+--- a/login.py
++++ /dev/null
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git merge main
+fatal: refusing to merge unrelated histories
+git@master:~/my-ci-cd-project$ git merge feature/login 
+Already up to date.
+git@master:~/my-ci-cd-project$ git merge origin/main 
+fatal: refusing to merge unrelated histories
+git@master:~/my-ci-cd-project$ git merge feature/login main
+fatal: refusing to merge unrelated histories
+git@master:~/my-ci-cd-project$ git merge main --allow-unrelated-histories
+Merge made by the 'ort' strategy.
+ README.md | 1 +
+ git       | 1 +
+ test.txt  | 1 +
+ 3 files changed, 3 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 git
+ create mode 100644 test.txt
+git@master:~/my-ci-cd-project$ ls
+abc.txt  git  login.py  README.md  test.txt
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git push
+fatal: The current branch feature/login has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature/login
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+git@master:~/my-ci-cd-project$ git push origin feature/login 
+Username for 'https://github.com': nrangashamaiah
+Password for 'https://nrangashamaiah@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 408 bytes | 408.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/nrangashamaiah/my-ci-cd-project.git
+   e0c1f54..ced3e63  feature/login -> feature/login
+git@master:~/my-ci-cd-project$ ls
+abc.txt  git  login.py  README.md  test.txt
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+git@master:~/my-ci-cd-project$ ls
+git  README.md  test.txt
+git@master:~/my-ci-cd-project$ git merge main --allow-unrelated-histories
+Already up to date.
+git@master:~/my-ci-cd-project$ git merge feature/login  --allow-unrelated-histories
+Updating 1905f34..ced3e63
+Fast-forward
+ abc.txt  | 0
+ login.py | 2 ++
+ 2 files changed, 2 insertions(+)
+ create mode 100644 abc.txt
+ create mode 100644 login.py
+git@master:~/my-ci-cd-project$ ls
+abc.txt  git  login.py  README.md  test.txt
+git@master:~/my-ci-cd-project$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git push origin main 
+Username for 'https://github.com': nrangashamaiah
+Password for 'https://nrangashamaiah@github.com': 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/nrangashamaiah/my-ci-cd-project.git
+   1905f34..ced3e63  main -> main
+git@master:~/my-ci-cd-project$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ ls
+abc.txt  git  login.py  README.md  test.txt
+git@master:~/my-ci-cd-project$ git checkout feature/login 
+Switched to branch 'feature/login'
+git@master:~/my-ci-cd-project$ ls
+abc.txt  git  login.py  README.md  test.txt
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git log
+commit ced3e63bf5c165101fcda0929041e5f1cc85a255 (HEAD -> feature/login, origin/main, origin/feature/login, main)
+Merge: e0c1f54 1905f34
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:41:41 2025 -0400
+
+    Merge branch 'main' into feature/login
+
+commit e0c1f54f2f8dee484d547a636052580e1d1ecb79
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:36:52 2025 -0400
+
+    added abc.txt
+
+commit 1905f34f593cdc1981626c7ea1a3a362ee6de2d3
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:26:28 2025 -0400
+
+    Create README.md
+
+commit bd93f3aa9fc035a00b122e8c3ce54e674d47812d
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:23:55 2025 -0400
+
+    adding test.txt
+
+commit 3dd0d4c4e680a6fdf0511a561bb5637d7aa0f25c
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:17:28 2025 -0400
+
+    remove duplicate
+
+commit 6ede96ebf347333ec1955c6656ca44ade0fbfd41
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 18:49:54 2025 -0400
+
+    Add basic login function
+
+commit 33cedf81ef74e63f05148d73a44c9d1835c95195
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:00:02 2025 -0400
+
+    git
+
+commit d7b274ff24221ed15897db34596beaf0d91199ba
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 18:49:54 2025 -0400
+
+    Add basic login function
+git@master:~/my-ci-cd-project$ git reset --hard d7b274ff24221ed15897db34596beaf0d91199ba
+HEAD is now at d7b274f Add basic login function
+git@master:~/my-ci-cd-project$ ls
+login.py
+git@master:~/my-ci-cd-project$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+git@master:~/my-ci-cd-project$ git log
+commit ced3e63bf5c165101fcda0929041e5f1cc85a255 (HEAD -> main, origin/main, origin/feature/login)
+Merge: e0c1f54 1905f34
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:41:41 2025 -0400
+
+    Merge branch 'main' into feature/login
+
+commit e0c1f54f2f8dee484d547a636052580e1d1ecb79
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:36:52 2025 -0400
+
+    added abc.txt
+
+commit 1905f34f593cdc1981626c7ea1a3a362ee6de2d3
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:26:28 2025 -0400
+
+    Create README.md
+
+commit bd93f3aa9fc035a00b122e8c3ce54e674d47812d
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:23:55 2025 -0400
+
+    adding test.txt
+
+commit 3dd0d4c4e680a6fdf0511a561bb5637d7aa0f25c
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:17:28 2025 -0400
+
+    remove duplicate
+
+commit 6ede96ebf347333ec1955c6656ca44ade0fbfd41
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 18:49:54 2025 -0400
+
+    Add basic login function
+
+commit 33cedf81ef74e63f05148d73a44c9d1835c95195
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:00:02 2025 -0400
+
+    git
+
+commit d7b274ff24221ed15897db34596beaf0d91199ba (feature/login)
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 18:49:54 2025 -0400
+
+    Add basic login function
+git@master:~/my-ci-cd-project$ git reset --hard d7b274ff24221ed15897db34596beaf0d91199ba
+HEAD is now at d7b274f Add basic login function
+git@master:~/my-ci-cd-project$ git status
+On branch main
+Your branch is behind 'origin/main' by 7 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git push -f
+Username for 'https://github.com': nrangashamaiah
+Password for 'https://nrangashamaiah@github.com': 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/nrangashamaiah/my-ci-cd-project.git
+ + ced3e63...d7b274f main -> main (forced update)
+git@master:~/my-ci-cd-project$ ls
+login.py
+git@master:~/my-ci-cd-project$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git checkout feature/login 
+Switched to branch 'feature/login'
+git@master:~/my-ci-cd-project$ ls
+login.py
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git push -f
+fatal: The current branch feature/login has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature/login
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+git@master:~/my-ci-cd-project$ git push --set-upstream origin feature/login
+Username for 'https://github.com': nrangashamaiah
+Password for 'https://nrangashamaiah@github.com': 
+To https://github.com/nrangashamaiah/my-ci-cd-project.git
+ ! [rejected]        feature/login -> feature/login (non-fast-forward)
+error: failed to push some refs to 'https://github.com/nrangashamaiah/my-ci-cd-project.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+git@master:~/my-ci-cd-project$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> feature/login
+
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git pull origin feature/login 
+From https://github.com/nrangashamaiah/my-ci-cd-project
+ * branch            feature/login -> FETCH_HEAD
+Updating d7b274f..ced3e63
+Fast-forward
+ README.md | 1 +
+ abc.txt   | 0
+ git       | 1 +
+ test.txt  | 1 +
+ 4 files changed, 3 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 abc.txt
+ create mode 100644 git
+ create mode 100644 test.txt
+git@master:~/my-ci-cd-project$ ls
+abc.txt  git  login.py  README.md  test.txt
+git@master:~/my-ci-cd-project$ git log
+commit ced3e63bf5c165101fcda0929041e5f1cc85a255 (HEAD -> feature/login, origin/feature/login)
+Merge: e0c1f54 1905f34
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:41:41 2025 -0400
+
+    Merge branch 'main' into feature/login
+
+commit e0c1f54f2f8dee484d547a636052580e1d1ecb79
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:36:52 2025 -0400
+
+    added abc.txt
+
+commit 1905f34f593cdc1981626c7ea1a3a362ee6de2d3
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:26:28 2025 -0400
+
+    Create README.md
+
+commit bd93f3aa9fc035a00b122e8c3ce54e674d47812d
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:23:55 2025 -0400
+
+    adding test.txt
+
+commit 3dd0d4c4e680a6fdf0511a561bb5637d7aa0f25c
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:17:28 2025 -0400
+
+    remove duplicate
+
+commit 6ede96ebf347333ec1955c6656ca44ade0fbfd41
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 18:49:54 2025 -0400
+
+    Add basic login function
+
+commit 33cedf81ef74e63f05148d73a44c9d1835c95195
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:00:02 2025 -0400
+
+    git
+
+commit d7b274ff24221ed15897db34596beaf0d91199ba (origin/main, main)
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 18:49:54 2025 -0400
+
+    Add basic login function
+git@master:~/my-ci-cd-project$ git reset --hard 6ede96ebf347333ec1955c6656ca44ade0fbfd41
+HEAD is now at 6ede96e Add basic login function
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ ls
+git  login.py
+git@master:~/my-ci-cd-project$ git push -f
+fatal: The current branch feature/login has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin feature/login
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+git@master:~/my-ci-cd-project$ git push -f origin feature/login 
+Username for 'https://github.com': nrangashamaiah
+Password for 'https://nrangashamaiah@github.com': 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/nrangashamaiah/my-ci-cd-project.git
+ + ced3e63...6ede96e feature/login -> feature/login (forced update)
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git merge main
+fatal: refusing to merge unrelated histories
+git@master:~/my-ci-cd-project$ git merge main --allow-unrelated-histories
+Merge made by the 'ort' strategy.
+git@master:~/my-ci-cd-project$ ls
+git  login.py
+git@master:~/my-ci-cd-project$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+git@master:~/my-ci-cd-project$ ls
+login.py
+git@master:~/my-ci-cd-project$ git checkout feature/login 
+Switched to branch 'feature/login'
+git@master:~/my-ci-cd-project$ ls
+git  login.py
+git@master:~/my-ci-cd-project$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 955 bytes | 159.00 KiB/s, done.
+From https://github.com/nrangashamaiah/my-ci-cd-project
+   6ede96e..9c5b0f2  feature/login -> origin/feature/login
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> feature/login
+
+git@master:~/my-ci-cd-project$ git pull origin feature/login 
+From https://github.com/nrangashamaiah/my-ci-cd-project
+ * branch            feature/login -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+git@master:~/my-ci-cd-project$ ls
+git  login.py
+git@master:~/my-ci-cd-project$ git pull origin main
+From https://github.com/nrangashamaiah/my-ci-cd-project
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+git@master:~/my-ci-cd-project$ git pull origin feature/login 
+From https://github.com/nrangashamaiah/my-ci-cd-project
+ * branch            feature/login -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+git@master:~/my-ci-cd-project$ git fetch 
+git@master:~/my-ci-cd-project$ ls
+git  login.py
+git@master:~/my-ci-cd-project$ git diff
+git@master:~/my-ci-cd-project$ git rebase
+There is no tracking information for the current branch.
+Please specify which branch you want to rebase against.
+See git-rebase(1) for details.
+
+    git rebase '<branch>'
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> feature/login
+
+git@master:~/my-ci-cd-project$ git rebase feature/login 
+Current branch feature/login is up to date.
+git@master:~/my-ci-cd-project$ ls
+git  login.py
+git@master:~/my-ci-cd-project$ git branch --set-upstream-to=origin/main feature/login 
+branch 'feature/login' set up to track 'origin/main'.
+git@master:~/my-ci-cd-project$ git rebase feature/login 
+Current branch feature/login is up to date.
+git@master:~/my-ci-cd-project$ git pull
+Already up to date.
+git@master:~/my-ci-cd-project$ ls
+git  login.py
+git@master:~/my-ci-cd-project$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+git@master:~/my-ci-cd-project$ ls
+login.py
+git@master:~/my-ci-cd-project$ git checkout feature/login 
+Switched to branch 'feature/login'
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+git@master:~/my-ci-cd-project$ ls
+git  login.py
+git@master:~/my-ci-cd-project$ git fetch
+git@master:~/my-ci-cd-project$ ls
+git  login.py
+git@master:~/my-ci-cd-project$ git push
+fatal: The upstream branch of your current branch does not match
+the name of your current branch.  To push to the upstream branch
+on the remote, use
+
+    git push origin HEAD:main
+
+To push to the branch of the same name on the remote, use
+
+    git push origin HEAD
+
+To choose either option permanently, see push.default in 'git help config'.
+
+To avoid automatically configuring an upstream branch when its name
+won't match the local branch, see option 'simple' of branch.autoSetupMerge
+in 'git help config'.
+
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git pull
+Already up to date.
+git@master:~/my-ci-cd-project$ cd ..
+git@master:~$ cd my-ci-cd-project/
+git@master:~/my-ci-cd-project$ git checkout feature/login 
+Already on 'feature/login'
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+git@master:~/my-ci-cd-project$ git branch --set-upstream-to=origin/feature/login  feature/login 
+branch 'feature/login' set up to track 'origin/feature/login'.
+git@master:~/my-ci-cd-project$ ls
+git  login.py
+git@master:~/my-ci-cd-project$ git pull
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+git@master:~/my-ci-cd-project$ git fetch
+git@master:~/my-ci-cd-project$ ls
+git  login.py
+git@master:~/my-ci-cd-project$ git push
+Username for 'https://github.com': nrangashamaiah
+Password for 'https://nrangashamaiah@github.com': 
+To https://github.com/nrangashamaiah/my-ci-cd-project.git
+ ! [rejected]        feature/login -> feature/login (non-fast-forward)
+error: failed to push some refs to 'https://github.com/nrangashamaiah/my-ci-cd-project.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+git@master:~/my-ci-cd-project$ git log
+commit e3b0fb582b9a6ced77b7686bd890b6667a69cd13 (HEAD -> feature/login)
+Merge: 6ede96e d7b274f
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 20:00:48 2025 -0400
+
+    Merge branch 'main' into feature/login
+
+commit 6ede96ebf347333ec1955c6656ca44ade0fbfd41
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 18:49:54 2025 -0400
+
+    Add basic login function
+
+commit 33cedf81ef74e63f05148d73a44c9d1835c95195
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 19:00:02 2025 -0400
+
+    git
+
+commit d7b274ff24221ed15897db34596beaf0d91199ba (origin/main, main)
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 18:49:54 2025 -0400
+
+    Add basic login function
+git@master:~/my-ci-cd-project$ git reset --hard d7b274ff24221ed15897db34596beaf0d91199ba
+HEAD is now at d7b274f Add basic login function
+git@master:~/my-ci-cd-project$ git log
+commit d7b274ff24221ed15897db34596beaf0d91199ba (HEAD -> feature/login, origin/main, main)
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 18:49:54 2025 -0400
+
+    Add basic login function
+git@master:~/my-ci-cd-project$ git push -f
+Username for 'https://github.com': nrangashamaiah
+Password for 'https://nrangashamaiah@github.com': 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/nrangashamaiah/my-ci-cd-project.git
+ + 9c5b0f2...d7b274f feature/login -> feature/login (forced update)
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+Your branch is up to date with 'origin/feature/login'.
+
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+git@master:~/my-ci-cd-project$ ls
+login.py
+git@master:~/my-ci-cd-project$ git log
+commit d7b274ff24221ed15897db34596beaf0d91199ba (HEAD -> main, origin/main, origin/feature/login, feature/login)
+Author: nrangashamaiah <nirmala.rangashamaiah@gmail.com>
+Date:   Wed Sep 17 18:49:54 2025 -0400
+
+    Add basic login function
+git@master:~/my-ci-cd-project$ git branch --set-upstream-to=origin/main main  
+branch 'main' set up to track 'origin/main'.
+git@master:~/my-ci-cd-project$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git checkout feature/login 
+Switched to branch 'feature/login'
+Your branch is up to date with 'origin/feature/login'.
+git@master:~/my-ci-cd-project$ ls
+login.py
+git@master:~/my-ci-cd-project$ vi git.txt
+git@master:~/my-ci-cd-project$ git add -A
+git@master:~/my-ci-cd-project$ git commit -m "adding git.txt"
+[feature/login 3c59035] adding git.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 git.txt
+git@master:~/my-ci-cd-project$ git push
+Username for 'https://github.com': nrangashamaiah
+Password for 'https://nrangashamaiah@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 325 bytes | 325.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/nrangashamaiah/my-ci-cd-project.git
+   d7b274f..3c59035  feature/login -> feature/login
+git@master:~/my-ci-cd-project$ git merge main 
+Already up to date.
+git@master:~/my-ci-cd-project$ ls
+git.txt  login.py
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+Your branch is up to date with 'origin/feature/login'.
+
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+git@master:~/my-ci-cd-project$ ls
+login.py
+git@master:~/my-ci-cd-project$ git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 901 bytes | 901.00 KiB/s, done.
+From https://github.com/nrangashamaiah/my-ci-cd-project
+   d7b274f..c800f55  main       -> origin/main
+Updating d7b274f..c800f55
+Fast-forward
+ git.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 git.txt
+git@master:~/my-ci-cd-project$ ls
+git.txt  login.py
+git@master:~/my-ci-cd-project$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git fetch
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 1 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 956 bytes | 239.00 KiB/s, done.
+From https://github.com/nrangashamaiah/my-ci-cd-project
+   c800f55..5c21e40  main       -> origin/main
+git@master:~/my-ci-cd-project$ git diff main origin/main 
+diff --git a/team.txt b/team.txt
+new file mode 100644
+index 0000000..9daeafb
+--- /dev/null
++++ b/team.txt
+@@ -0,0 +1 @@
++test
+git@master:~/my-ci-cd-project$ git pull
+Updating c800f55..5c21e40
+Fast-forward
+ team.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 team.txt
+git@master:~/my-ci-cd-project$ ls
+git.txt  login.py  team.txt
+git@master:~/my-ci-cd-project$ git checkout feature/login 
+Switched to branch 'feature/login'
+Your branch is up to date with 'origin/feature/login'.
+git@master:~/my-ci-cd-project$ git merge main 
+Updating 3c59035..5c21e40
+Fast-forward
+ team.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 team.txt
+git@master:~/my-ci-cd-project$ ls
+git.txt  login.py  team.txt
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+Your branch is ahead of 'origin/feature/login' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git diff
+git@master:~/my-ci-cd-project$ vi login.py 
+git@master:~/my-ci-cd-project$ vi login.py 
+git@master:~/my-ci-cd-project$ git commit -a -m "fix"
+[feature/login f2b6e1b] fix
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+git@master:~/my-ci-cd-project$ git stash
+No local changes to save
+git@master:~/my-ci-cd-project$ git checkout -b hotfix/login-bug
+Switched to a new branch 'hotfix/login-bug'
+git@master:~/my-ci-cd-project$ ls
+git.txt  login.py  team.txt
+git@master:~/my-ci-cd-project$ git status
+On branch hotfix/login-bug
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ ls
+git.txt  login.py  team.txt
+git@master:~/my-ci-cd-project$ nano login.py 
+git@master:~/my-ci-cd-project$ git status
+On branch hotfix/login-bug
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   login.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+git@master:~/my-ci-cd-project$ git commit -am "Fix login crash"
+[hotfix/login-bug bce570b] Fix login crash
+ 1 file changed, 1 insertion(+)
+git@master:~/my-ci-cd-project$ git push origin hotfix/login-bug 
+Username for 'https://github.com': nrangashamaiah
+Password for 'https://nrangashamaiah@github.com': 
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 623 bytes | 311.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'hotfix/login-bug' on GitHub by visiting:
+remote:      https://github.com/nrangashamaiah/my-ci-cd-project/pull/new/hotfix/login-bug
+remote: 
+To https://github.com/nrangashamaiah/my-ci-cd-project.git
+ * [new branch]      hotfix/login-bug -> hotfix/login-bug
+git@master:~/my-ci-cd-project$ ls
+git.txt  login.py  team.txt
+git@master:~/my-ci-cd-project$ cat login.py 
+def login(user, password):
+    return user == "admin" and password == "12345"
+testing
+git@master:~/my-ci-cd-project$ git checkout feature/login 
+Switched to branch 'feature/login'
+Your branch is ahead of 'origin/feature/login' by 3 commits.
+  (use "git push" to publish your local commits)
+git@master:~/my-ci-cd-project$ ls
+git.txt  login.py  team.txt
+git@master:~/my-ci-cd-project$ cat login.py 
+def login(user, password):
+    return user == "admin" and password == "12345"
+git@master:~/my-ci-cd-project$ git stash pop
+No stash entries found.
+git@master:~/my-ci-cd-project$ git log --oneline
+f2b6e1b (HEAD -> feature/login) fix
+5c21e40 (origin/main, main) Create team.txt
+c800f55 Merge pull request #1 from nrangashamaiah/feature/login
+3c59035 (origin/feature/login) adding git.txt
+d7b274f Add basic login function
+git@master:~/my-ci-cd-project$ git status
+On branch feature/login
+Your branch is ahead of 'origin/feature/login' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+git@master:~/my-ci-cd-project$ git checkout hotfix/login-bug 
+Switched to branch 'hotfix/login-bug'
+git@master:~/my-ci-cd-project$ git log --oneline
+bce570b (HEAD -> hotfix/login-bug, origin/hotfix/login-bug) Fix login crash
+f2b6e1b (feature/login) fix
+5c21e40 (origin/main, main) Create team.txt
+c800f55 Merge pull request #1 from nrangashamaiah/feature/login
+3c59035 (origin/feature/login) adding git.txt
+d7b274f Add basic login function
+git@master:~/my-ci-cd-project$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+git@master:~/my-ci-cd-project$ git log --oneline
+5c21e40 (HEAD -> main, origin/main) Create team.txt
+c800f55 Merge pull request #1 from nrangashamaiah/feature/login
+3c59035 (origin/feature/login) adding git.txt
+d7b274f Add basic login function
+git@master:~/my-ci-cd-project$ history
+    1  mkdir myproject.git
+    2  cd myproject.git/
+    3  git init --bare
+    4  xit
+    5  exit
+    6  git config --list
+    7  exit
+    8  ls
+    9  cd myproject.git/
+   10  git og
+   11  git log
+   12  ls
+   13  exit
+   14  ls
+   15  history
+   16  exit
+   17  history
+   18  exit
+   19  cd /home/git/.ssh/
+   20  ls
+   21  cd au
+   22  cat authorized_keys 
+   23  cd..
+   24  cd ..
+   25  ls
+   26  git clone https://github.com/nrangashamaiah/my-ci-cd-project.git
+   27  cd my-ci-cd-project/
+   28  git status
+   29  git checkout -b feature/login
+   30  git branch
+   31  vi login.py
+   32  git add login.py 
+   33  git commit -m "Add basic login function"
+   34  git config --global user.name "nrangashamaiah"
+   35  git config --global user.email "nirmala.rangashamaiah@gmail.com"
+   36  git status
+   37  git commit -m "Add basic login function"
+   38  git push origin feature/login
+   39  git pull
+   40  git status
+   41  ls
+   42  git branch main
+   43  git status
+   44  git branch
+   45  git checkout main
+   46  git pull
+   47  ls
+   48  git status
+   49  git pull
+   50  git checkout feature/login 
+   51  git status
+   52  ls
+   53  git log
+   54  git push
+   55  git push origin feature/login
+   56  git status
+   57  git branch
+   58  git checkout main
+   59  git status
+   60  git pull
+   61  git pull -f
+   62  git config --list
+   63  git pull origin main
+   64  ls
+   65  git status
+   66  git fetch origin
+   67  git diff main origin/main
+   68  git pull origin main
+   69  git merge main
+   70  git checkout feature/login 
+   71  git merge main
+   72  git checkout main
+   73  git diff
+   74  git stash
+   75  git status
+   76  git pull
+   77  git rebase
+   78  git pull
+   79  ls
+   80  git status
+   81  git push
+   82  ls
+   83  rm login.py 
+   84  ls
+   85  git status
+   86  git add -A
+   87  git commit -m "remove duplicate"
+   88  git push
+   89  git checkout feature/login 
+   90  git checkout main
+   91  git pull origin main
+   92  git checkout feature/login 
+   93  git merge main
+   94  git status
+   95  git diff
+   96  git checkout main
+   97  ls
+   98  git add test.txt
+   99  vi test.txt
+  100  git add test.txt
+  101  git commit -m "adding test.txt"
+  102  git push
+  103  git fetch origin
+  104  git diff main origin/main
+  105  git pull origin main
+  106  git checkout feature/login 
+  107  git merge main
+  108  git merge origin/main 
+  109  git log
+  110  git checkout feature/login 
+  111  git log
+  112  git checkout main 
+  113  git log
+  114  git checkout feature/login 
+  115  vi abc.txt >> "abc"
+  116  ls
+  117  git status
+  118  git rebase
+  119  git rebase feature/login 
+  120  git status
+  121  rm abc 
+  122  ls
+  123  git status
+  124  vi abc.txt
+  125  ls
+  126  git add -A
+  127  git commit -m "added abc.txt"
+  128  git push origin feature/login 
+  129  git diff
+  130  git diff feature/login main 
+  131  git status
+  132  git merge main
+  133  git merge feature/login 
+  134  git merge origin/main 
+  135  git merge feature/login main
+  136  git merge main --allow-unrelated-histories
+  137  ls
+  138  git status
+  139  git push
+  140  git push origin feature/login 
+  141  ls
+  142  git status
+  143  git checkout main
+  144  ls
+  145  git merge main --allow-unrelated-histories
+  146  git merge feature/login  --allow-unrelated-histories
+  147  ls
+  148  git status
+  149  git push origin main 
+  150  git status
+  151  ls
+  152  git checkout feature/login 
+  153  ls
+  154  git status
+  155  git log
+  156  git reset --hard d7b274ff24221ed15897db34596beaf0d91199ba
+  157  ls
+  158  git checkout main
+  159  git log
+  160  git reset --hard d7b274ff24221ed15897db34596beaf0d91199ba
+  161  git status
+  162  git push -f
+  163  ls
+  164  git status
+  165  git checkout feature/login 
+  166  ls
+  167  git status
+  168  git push -f
+  169  git push --set-upstream origin feature/login
+  170  git pull
+  171  git status
+  172  git pull origin feature/login 
+  173  ls
+  174  git log
+  175  git reset --hard 6ede96ebf347333ec1955c6656ca44ade0fbfd41
+  176  git status
+  177  ls
+  178  git push -f
+  179  git push -f origin feature/login 
+  180  git status
+  181  git merge main
+  182  git merge main --allow-unrelated-histories
+  183  ls
+  184  git checkout main
+  185  ls
+  186  git checkout feature/login 
+  187  ls
+  188  git pull
+  189  git pull origin feature/login 
+  190  ls
+  191  git pull origin main
+  192  git pull origin feature/login 
+  193  git fetch 
+  194  ls
+  195  git diff
+  196  git rebase
+  197  git rebase feature/login 
+  198  ls
+  199  git branch --set-upstream-to=origin/main feature/login 
+  200  git rebase feature/login 
+  201  git pull
+  202  ls
+  203  git checkout main 
+  204  ls
+  205  git checkout feature/login 
+  206  ls
+  207  git fetch
+  208  ls
+  209  git push
+  210  git status
+  211  git pull
+  212  cd ..
+  213  cd my-ci-cd-project/
+  214  git checkout feature/login 
+  215  git branch --set-upstream-to=origin/feature/login  feature/login 
+  216  ls
+  217  git pull
+  218  git fetch
+  219  ls
+  220  git push
+  221  git log
+  222  git reset --hard d7b274ff24221ed15897db34596beaf0d91199ba
+  223  git log
+  224  git push -f
+  225  git status
+  226  git checkout main 
+  227  ls
+  228  git log
+  229  git branch --set-upstream-to=origin/main main  
+  230  git status
+  231  git checkout feature/login 
+  232  ls
+  233  vi git.txt
+  234  git add -A
+  235  git commit -m "adding git.txt"
+  236  git push
+  237  git merge main 
+  238  ls
+  239  git status
+  240  git checkout main
+  241  ls
+  242  git pull
+  243  ls
+  244  git status
+  245  git fetch
+  246  git diff main origin/main 
+  247  git pull
+  248  ls
+  249  git checkout feature/login 
+  250  git merge main 
+  251  ls
+  252  git status
+  253  git diff
+  254  vi login.py 
+  255  git commit -a -m "fix"
+  256  git stash
+  257  git checkout -b hotfix/login-bug
+  258  ls
+  259  git status
+  260  ls
+  261  nano login.py 
+  262  git status
+  263  git commit -am "Fix login crash"
+  264  git push origin hotfix/login-bug 
+  265  ls
+  266  cat login.py 
+  267  git checkout feature/login 
+  268  ls
+  269  cat login.py 
+  270  git stash pop
+  271  git log --oneline
+  272  git status
+  273  git checkout hotfix/login-bug 
+  274  git log --oneline
+  275  git checkout main
+  276  git log --oneline
+  277  history
+git@master:~/my-ci-cd-project$ 
